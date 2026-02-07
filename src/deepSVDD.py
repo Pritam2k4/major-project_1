@@ -116,7 +116,9 @@ class DeepSVDD(object):
         """Save Deep SVDD model to export_model."""
 
         net_dict = self.net.state_dict()
-        ae_net_dict = self.ae_net.state_dict() if save_ae else None
+        ae_net_dict = None
+        if save_ae and (self.ae_net is not None):
+            ae_net_dict = self.ae_net.state_dict()
 
         torch.save({'R': self.R,
                     'c': self.c,

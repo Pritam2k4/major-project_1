@@ -2,6 +2,35 @@
 This repository provides a [PyTorch](https://pytorch.org/) implementation of the *Deep SVDD* method presented in our
 ICML 2018 paper ”Deep One-Class Classification”.
 
+## Experiment Results (example)
+
+This repository was used to run an experiment on the folder `data/output_fused` (images created by a fusion pipeline).
+Summary of the most recent run saved under `log/`:
+
+- **Dataset:** output_fused
+- **Network:** cifar10_LeNet
+- **Device:** cuda (RTX 3050)
+- **Epochs:** 200
+- **Training time:** 1122.535 seconds (total)
+- **Testing time:** 5.403 seconds
+- **Test AUC:** NaN (only one class present in the test set)
+- **Saved outputs:** `log/model.tar`, `log/results.json`, `log/config.json`, `log/log.txt`
+
+Example log excerpts (training start and final epoch):
+
+```
+INFO:root:  Epoch 1/200	 Time: 5.672	 Loss: 26.54929404
+...
+INFO:root:  Epoch 200/200	 Time: 5.413	 Loss: 0.05246036
+INFO:root:Training time: 1122.535
+INFO:root:Starting testing...
+INFO:root:Testing time: 5.403
+INFO:root:Test set AUC: nan%
+```
+
+See the `log/` folder for the full `log.txt`, trained model and results JSON.
+
+
 
 ## Citation and Contact
 You find a PDF of the Deep One-Class Classification ICML 2018 paper at 
