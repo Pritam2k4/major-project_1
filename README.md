@@ -139,17 +139,17 @@ Autoencoder pretraining is used for parameter initialization.
 
 ## Examples
 
-### MNIST
-Example of the 32 most normal (left) and 32 most anomalous (right) test set examples per class on MNIST according to 
-Deep SVDD anomaly scores.
+### Fused CT / MRI examples
+Example fused CT/MRI images used in the experiment (stored under `data/output_fused`).
 
-![MNIST](imgs/mnist.png?raw=true "MNIST")
+Below are a few representative fused slices from the dataset produced by the fusion pipeline:
 
-### CIFAR-10
-Example of the 32 most normal (left) and 32 most anomalous (right) test set examples per class on CIFAR-10 according to 
-Deep SVDD anomaly scores.
+![Fused 1](data/output_fused/001_slice_0099_fused.png)
+![Fused 2](data/output_fused/003_slice_0122_fused.png)
+![Fused 3](data/output_fused/010_slice_0139_fused.png)
+![Fused 4](data/output_fused/090_slice_0139_fused.png)
 
-![CIFAR-10](imgs/cifar10.png?raw=true "CIFAR-10")
+These images were treated as the "normal" class for the run described in the Experiment Results section.
 
 
 ## License
